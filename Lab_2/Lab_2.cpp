@@ -3,15 +3,25 @@
 
 int main()
 {
-    const int n = 30;
-    int A[n] = { 
+    srand(time(0));
+    const int n = 15;
+    int A[n];
+
+    initialize(A, n);
+    show(A, n);
+
+
+    /*int A[n] = { 
       14, 27, 6,  25, 1,
       21, 10, 28, 4,  13,
       17, 8,  24, 2,  30,
       9,  19, 23, 11, 29,
       7,  22, 5,  20, 16,
       15, 26, 3,  12, 18
-    };
+    };*/
+
+
+
  
 
     int choise = 0;
@@ -32,6 +42,10 @@ int main()
     case 3: sort_selection(A, n, first, last); break;
     default: std::cout << "Incorrect data :("; return(0);
     }
+
+
+    std::cout<<"Max item->" << MaxItem(A, first, last)<<std::endl;
+    std::cout<<"Min item->" << MinItem(A, first, last)<<std::endl;
 
     show(A, n);
 
