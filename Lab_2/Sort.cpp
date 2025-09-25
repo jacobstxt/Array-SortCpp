@@ -68,10 +68,10 @@ void sort_inserting(int* A, int n, int first, int last)
     int j;
     int key;
 
-    for (i = 1; i < last; i++)
+    for (i = first; i < last; i++)
     {
         key = A[i];
-        for (j = i - 1; j >= 0 && A[j] > key; j--)
+        for (j = i-1; j >= first && A[j] > key; j--)
         {
             A[j + 1] = A[j];
         }

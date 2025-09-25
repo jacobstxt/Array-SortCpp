@@ -4,7 +4,7 @@
 int main()
 {
     srand(time(0));
-    const int n = 15;
+    const int n = 10;
     int A[n];
 
     initialize(A, n);
